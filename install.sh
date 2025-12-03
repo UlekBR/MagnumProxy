@@ -16,6 +16,7 @@ if [[ $arch == "x86_64" || $arch == "amd64" || $arch == "x86_64h" ]]; then
     curl -o "/opt/magnumproxy/proxy" -f "https://raw.githubusercontent.com/UlekBR/MagnumProxy/refs/heads/main/MagnumProxy_x64"
     curl -o "/opt/magnumproxy/sslproxy" -f "https://raw.githubusercontent.com/UlekBR/MagnumProxy/refs/heads/main/MagnumProxySSL_x64"
     curl -o "/opt/magnumproxy/menu" -f "https://raw.githubusercontent.com/UlekBR/MagnumProxy/refs/heads/main/menu_x64"
+    curl -o "/opt/magnumproxy/udpgw" -f "https://raw.githubusercontent.com/UlekBR/MagnumProxy/refs/heads/main/udpgw"
 elif [[ $arch == "aarch64" || $arch == "arm64" || $arch == "armv8-a" ]]; then
     echo "Sistema baseado em arm64 (64-bit ARM)"
     curl -o "/opt/magnumproxy/proxy" -f "https://raw.githubusercontent.com/UlekBR/MagnumProxy/refs/heads/main/MagnumProxy_arm64"
@@ -31,6 +32,7 @@ curl -o "/opt/magnumproxy/key.pem" -f "https://raw.githubusercontent.com/UlekBR/
 
 chmod +x /opt/magnumproxy/proxy
 chmod +x /opt/magnumproxy/sslproxy
+chmod +x /opt/magnumproxy/udpgw
 chmod +x /opt/magnumproxy/menu
 
 ln -s /opt/magnumproxy/menu /usr/local/bin/magnumproxy
